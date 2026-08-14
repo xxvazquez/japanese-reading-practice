@@ -1,0 +1,156 @@
+{
+  "id": "neko-to-watashi",
+  "jlptLevel": "N5",
+  "estimatedReadingMinutes": 1,
+  "title": {
+    "tokens": [
+      { "surface": "猫", "furigana": "ねこ", "pos": "noun" },
+      { "surface": "と", "pos": "particle" },
+      { "surface": "私", "furigana": "わたし", "pos": "noun" }
+    ],
+    "romaji": "Neko to Watashi",
+    "english": "The Cat and I"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "tokens": [
+        { "surface": "私", "furigana": "わたし", "pos": "noun" },
+        { "surface": "の", "pos": "particle" },
+        { "surface": "家", "furigana": "いえ", "pos": "noun" },
+        { "surface": "に", "pos": "particle" },
+        { "surface": "猫", "furigana": "ねこ", "pos": "noun" },
+        { "surface": "が", "pos": "particle" },
+        { "surface": "います", "pos": "verb" },
+        { "surface": "。", "pos": "other" }
+      ],
+      "romaji": "Watashi no ie ni neko ga imasu.",
+      "english": "There is a cat in my house."
+    },
+    {
+      "id": "s2",
+      "tokens": [
+        { "surface": "猫", "furigana": "ねこ", "pos": "noun" },
+        { "surface": "の", "pos": "particle" },
+        { "surface": "名前", "furigana": "なまえ", "pos": "noun" },
+        { "surface": "は", "pos": "particle" },
+        { "surface": "モモ", "pos": "noun" },
+        { "surface": "です", "pos": "other" },
+        { "surface": "。", "pos": "other" }
+      ],
+      "romaji": "Neko no namae wa Momo desu.",
+      "english": "The cat's name is Momo."
+    },
+    {
+      "id": "s3",
+      "tokens": [
+        { "surface": "モモ", "pos": "noun" },
+        { "surface": "は", "pos": "particle" },
+        { "surface": "白くて", "furigana": "しろくて", "pos": "adjective" },
+        { "surface": "、", "pos": "other" },
+        { "surface": "小さい", "furigana": "ちいさい", "pos": "adjective" },
+        { "surface": "です", "pos": "other" },
+        { "surface": "。", "pos": "other" }
+      ],
+      "romaji": "Momo wa shirokute, chiisai desu.",
+      "english": "Momo is white and small."
+    },
+    {
+      "id": "s4",
+      "tokens": [
+        { "surface": "毎日", "furigana": "まいにち", "pos": "noun" },
+        { "surface": "、", "pos": "other" },
+        { "surface": "朝ご飯", "furigana": "あさごはん", "pos": "noun" },
+        { "surface": "を", "pos": "particle" },
+        { "surface": "あげます", "pos": "verb" },
+        { "surface": "。", "pos": "other" }
+      ],
+      "romaji": "Mainichi, asagohan o agemasu.",
+      "english": "Every day, I give her breakfast."
+    },
+    {
+      "id": "s5",
+      "tokens": [
+        { "surface": "モモ", "pos": "noun" },
+        { "surface": "は", "pos": "particle" },
+        { "surface": "よく", "pos": "adverb" },
+        { "surface": "寝ます", "furigana": "ねます", "pos": "verb" },
+        { "surface": "。", "pos": "other" }
+      ],
+      "romaji": "Momo wa yoku nemasu.",
+      "english": "Momo sleeps a lot."
+    },
+    {
+      "id": "s6",
+      "tokens": [
+        { "surface": "時々", "furigana": "ときどき", "pos": "adverb" },
+        { "surface": "、", "pos": "other" },
+        { "surface": "一緒に", "furigana": "いっしょに", "pos": "adverb" },
+        { "surface": "遊びます", "furigana": "あそびます", "pos": "verb" },
+        { "surface": "。", "pos": "other" }
+      ],
+      "romaji": "Tokidoki, issho ni asobimasu.",
+      "english": "Sometimes, we play together."
+    },
+    {
+      "id": "s7",
+      "tokens": [
+        { "surface": "モモ", "pos": "noun" },
+        { "surface": "は", "pos": "particle" },
+        { "surface": "とても", "pos": "adverb" },
+        { "surface": "かわいい", "pos": "adjective" },
+        { "surface": "です", "pos": "other" },
+        { "surface": "。", "pos": "other" }
+      ],
+      "romaji": "Momo wa totemo kawaii desu.",
+      "english": "Momo is very cute."
+    },
+    {
+      "id": "s8",
+      "tokens": [
+        { "surface": "私", "furigana": "わたし", "pos": "noun" },
+        { "surface": "は", "pos": "particle" },
+        { "surface": "モモ", "pos": "noun" },
+        { "surface": "が", "pos": "particle" },
+        { "surface": "大好き", "furigana": "だいすき", "pos": "adjective" },
+        { "surface": "です", "pos": "other" },
+        { "surface": "。", "pos": "other" }
+      ],
+      "romaji": "Watashi wa Momo ga daisuki desu.",
+      "english": "I love Momo very much."
+    }
+  ],
+  "vocabulary": [
+    { "word": "家", "furigana": "いえ", "romaji": "ie", "meaning": "house, home", "pos": "noun" },
+    { "word": "猫", "furigana": "ねこ", "romaji": "neko", "meaning": "cat", "pos": "noun" },
+    { "word": "名前", "furigana": "なまえ", "romaji": "namae", "meaning": "name", "pos": "noun" },
+    { "word": "白い", "furigana": "しろい", "romaji": "shiroi", "meaning": "white", "pos": "adjective" },
+    { "word": "小さい", "furigana": "ちいさい", "romaji": "chiisai", "meaning": "small", "pos": "adjective" },
+    { "word": "毎日", "furigana": "まいにち", "romaji": "mainichi", "meaning": "every day", "pos": "noun" },
+    { "word": "あげます", "furigana": "あげます", "romaji": "agemasu", "meaning": "to give", "pos": "verb" },
+    { "word": "よく", "furigana": "よく", "romaji": "yoku", "meaning": "often, a lot", "pos": "adverb" },
+    { "word": "一緒に", "furigana": "いっしょに", "romaji": "issho ni", "meaning": "together", "pos": "adverb" },
+    { "word": "遊びます", "furigana": "あそびます", "romaji": "asobimasu", "meaning": "to play", "pos": "verb" },
+    { "word": "とても", "furigana": "とても", "romaji": "totemo", "meaning": "very", "pos": "adverb" },
+    { "word": "かわいい", "furigana": "かわいい", "romaji": "kawaii", "meaning": "cute", "pos": "adjective" },
+    { "word": "大好き", "furigana": "だいすき", "romaji": "daisuki", "meaning": "to love, to like very much", "pos": "adjective" }
+  ],
+  "grammar": [
+    {
+      "pattern": "い-adjective + くて",
+      "explanation": "The te-form of an i-adjective (白い → 白くて) links it to another description in the same sentence, as in 白くて、小さいです (\"white and small\")."
+    },
+    {
+      "pattern": "〜がいます",
+      "explanation": "います marks the existence of an animate being such as a person or animal; あります is used instead for inanimate things."
+    },
+    {
+      "pattern": "〜が好き/大好きです",
+      "explanation": "With feeling adjectives like 好き (\"like\") and 大好き (\"love\"), が marks the thing being liked, not を, as in モモが大好きです (\"[I] love Momo\")."
+    },
+    {
+      "pattern": "な-adjective + です",
+      "explanation": "な-adjectives such as 大好き attach directly to です as the sentence predicate; な only appears when the adjective comes before a noun (大好きな猫)."
+    }
+  ]
+}
