@@ -18,8 +18,8 @@ export function StoryListItem({ story, isActive, onSelect }: StoryListItemProps)
       className={clsx(
         "group w-full rounded-xl border px-4 py-3.5 text-left transition-all duration-200",
         isActive
-          ? "border-ink/10 bg-white shadow-card"
-          : "border-transparent hover:border-ink/5 hover:bg-white/60",
+          ? "border-ink/10 bg-paper-surface shadow-card"
+          : "border-transparent hover:border-ink/5 hover:bg-paper-surface/60",
       )}
     >
       <div className="flex items-start justify-between gap-3">

@@ -23,7 +23,7 @@ export function JlptFilter({ activeLevels, onToggle }: JlptFilterProps) {
               "rounded-full px-3 py-1 text-xs font-medium tracking-wide transition-all duration-200",
               isActive
                 ? "bg-ink text-paper shadow-sm"
-                : "bg-white/70 text-ink-soft hover:bg-white",
+                : "bg-paper-surface/70 text-ink-soft hover:bg-paper-surface",
             )}
           >
             {level}
