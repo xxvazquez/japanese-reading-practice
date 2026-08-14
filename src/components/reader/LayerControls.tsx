@@ -11,7 +11,7 @@ export function LayerControls() {
   const { layers, toggleLayer } = useReaderSettings();
 
   return (
-    <div className="flex flex-wrap items-center gap-2">
+    <div className="flex flex-wrap items-center gap-1">
       {(Object.keys(LAYER_LABELS) as Array<keyof typeof LAYER_LABELS>).map((layer) => (
         <LayerToggle
           key={layer}

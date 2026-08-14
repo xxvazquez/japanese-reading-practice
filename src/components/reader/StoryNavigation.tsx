@@ -31,7 +31,7 @@ function NavCard({
 
   if (!story) {
     return (
-      <div className="rounded-2xl border border-dashed border-ink/10 px-5 py-4 text-sm text-ink-faint/60">
+      <div className="rounded-xl border border-dashed border-ink/10 px-5 py-4 text-sm text-ink-faint/60">
         {isNext ? "You've reached the last story." : "This is the first story."}
       </div>
     );
@@ -42,7 +42,7 @@ function NavCard({
       type="button"
       onClick={() => onNavigate(story.id)}
       className={clsx(
-        "group flex items-center gap-3 rounded-2xl border border-ink/[0.06] bg-white/60 px-5 py-4 text-left transition-all duration-200 hover:border-ink/10 hover:bg-white hover:shadow-card",
+        "group flex items-center gap-3 rounded-xl border border-ink/[0.08] px-5 py-4 text-left transition-colors duration-200 hover:border-ink/20",
         isNext && "sm:flex-row-reverse sm:text-right",
       )}
     >
@@ -55,7 +55,7 @@ function NavCard({
         <p className="text-xs uppercase tracking-[0.15em] text-ink-faint">
           {isNext ? "Next" : "Previous"}
         </p>
-        <p className="truncate font-jp text-base text-ink">
+        <p className="jp-text truncate text-base text-ink">
           {tokensToPlainText(story.title.tokens)}
         </p>
       </div>

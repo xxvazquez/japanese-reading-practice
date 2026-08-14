@@ -8,7 +8,7 @@
   }
 
   ::selection {
-    @apply bg-accent-sora/25;
+    @apply bg-accent-sora/20;
   }
 
   /* Thin, quiet scrollbars fit the calm reading feel better than the OS default. */
@@ -26,7 +26,30 @@
     background: transparent;
   }
 
+  /*
+   * `space-around` is what real Japanese typesetting uses to distribute a
+   * furigana reading that's longer than its kanji base — half a space at
+   * each edge, full spaces between groups — rather than just centering the
+   * whole block. Safari/older engines that don't recognize the value drop
+   * that single declaration and keep the `center` line above it as a fallback.
+   */
   ruby rt {
+    ruby-position: over;
     ruby-align: center;
+    ruby-align: space-around;
+  }
+}
+
+@layer components {
+  /* Shared baseline for any block of Japanese prose — keeps font, line-height,
+     and tracking consistent between the title, sentences, and vocabulary list. */
+  .jp-text {
+    @apply font-jp tracking-[0.01em];
+  }
+
+  /* Furigana reading. Sized relative to its parent's font-size (`em`) so it
+     scales correctly wherever it's used — title, sentence, or vocab entry. */
+  .furigana {
+    @apply select-none font-jpSans text-[0.52em] font-normal not-italic tracking-normal text-ink-faint;
   }
 }
