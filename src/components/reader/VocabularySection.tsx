@@ -1,7 +1,7 @@
 import { BookText } from "lucide-react";
 import type { VocabularyEntry } from "../../types/story";
 import { CollapsibleSection } from "../ui/CollapsibleSection";
-import { POS_STYLES } from "../../lib/posStyles";
+import { POS_STYLES } from "../../utils/posStyles";
 
 export function VocabularySection({ vocabulary }: { vocabulary: VocabularyEntry[] }) {
   return (

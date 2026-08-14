@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { stories } from "../data/stories";
+import { stories } from "../content/stories";
 import type { JlptLevel, Story } from "../types/story";
 
 // Search matches on any title variant, since a learner might type either
