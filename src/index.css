@@ -8,7 +8,7 @@
   }
 
   ::selection {
-    @apply bg-accent-sora/20;
+    @apply bg-accent-slate/20;
   }
 
   /* Thin, quiet scrollbars fit the calm reading feel better than the OS default. */

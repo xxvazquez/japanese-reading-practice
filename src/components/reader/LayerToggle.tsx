@@ -29,7 +29,7 @@ export function LayerToggle({ label, checked, onChange }: LayerToggleProps) {
         <motion.span
           layout
           transition={{ type: "spring", stiffness: 500, damping: 32 }}
-          className="h-3 w-3 rounded-full bg-white shadow-sm"
+          className="h-3 w-3 rounded-full bg-paper-surface shadow-sm"
           style={{ marginLeft: checked ? "calc(100% - 0.75rem)" : "0.125rem" }}
         />
       </span>

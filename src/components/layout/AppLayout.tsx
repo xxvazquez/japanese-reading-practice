@@ -33,7 +33,7 @@ export function AppLayout({ sidebar, children, selectedStoryId }: AppLayoutProps
           <button
             type="button"
             onClick={() => setMobileOpen(true)}
-            className="flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs font-medium text-ink-soft shadow-sm"
+            className="flex items-center gap-1.5 rounded-full bg-paper-surface px-3 py-1.5 text-xs font-medium text-ink-soft shadow-sm"
           >
             <Library className="h-3.5 w-3.5" strokeWidth={1.75} />
             Library
@@ -57,7 +57,7 @@ export function AppLayout({ sidebar, children, selectedStoryId }: AppLayoutProps
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
-              className="fixed inset-y-0 left-0 z-50 w-[85%] max-w-sm bg-paper shadow-xl md:hidden"
+              className="fixed inset-y-0 left-0 z-50 w-[85%] max-w-sm bg-paper-soft shadow-xl md:hidden"
             >
               <button
                 type="button"

@@ -4,32 +4,35 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Warm paper for the page and the reading panel; cooler "mist" tones
+        // for the library/sidebar chrome around it — the story stays the one
+        // warm, inviting surface on the page.
         paper: {
-          DEFAULT: "#FAF7F2",
-          soft: "#F4EFE7",
-          muted: "#EEE7DA",
+          DEFAULT: "#FAF8F4",
+          surface: "#F8FBFB",
+          soft: "#EDF2F2",
+          muted: "#E1E8E8",
         },
         ink: {
-          DEFAULT: "#3B372F",
-          soft: "#655F54",
-          faint: "#9C9284",
+          DEFAULT: "#2B3E4A",
+          soft: "#52697A",
+          faint: "#8FA0A8",
         },
         accent: {
-          sakura: "#C9A0A6",
-          matcha: "#8FAE9B",
-          sora: "#8FA8C4",
-          sumi: "#7A7368",
-          kuchiba: "#B98F63",
+          navy: "#2C4356",
+          slate: "#5C7A94",
+          teal: "#5E8C8A",
+          mist: "#C7D4D6",
         },
-        // Deliberately closer to `ink` than to a highlighter — these read as a hint
-        // of tint on close inspection, not a wash of color across the page.
+        // A sea-glass gradient (navy → slate → teal → seafoam → lavender) so each
+        // part of speech stays distinguishable without reaching for a warm hue.
         pos: {
-          particle: "#8A6A3D",
-          verb: "#52708C",
-          noun: "#8C5B68",
-          adjective: "#4E7A5C",
-          adverb: "#6E5E8C",
-          other: "#6B6459",
+          particle: "#33495A",
+          verb: "#4C6F8C",
+          noun: "#4C807E",
+          adjective: "#5B8567",
+          adverb: "#746F8C",
+          other: "#8B8A80",
         },
       },
       fontFamily: {
@@ -50,21 +53,30 @@ export default {
           '"Yu Gothic"',
           "sans-serif",
         ],
+        // One interface typeface, not a stack of trendy web fonts — Noto Sans JP
+        // handles both the Japanese and Latin UI text so the whole app reads as
+        // one deliberate system instead of an assembled template.
         ui: [
-          '"Inter"',
           '"Noto Sans JP"',
           "-apple-system",
           "BlinkMacSystemFont",
+          '"Segoe UI"',
+          "Roboto",
           "sans-serif",
         ],
-        serif: ['"Newsreader"', "serif"],
+        // English translations get a quiet literary serif — no extra webfont
+        // request, just a well-chosen system stack.
+        serif: [
+          "Georgia",
+          '"Iowan Old Style"',
+          '"Palatino Linotype"',
+          "Palatino",
+          "serif",
+        ],
       },
       boxShadow: {
-        soft: "0 2px 20px -6px rgba(59, 55, 47, 0.10)",
-        card: "0 1px 2px rgba(59, 55, 47, 0.05), 0 6px 16px -10px rgba(59, 55, 47, 0.08)",
-      },
-      borderRadius: {
-        xl2: "1.25rem",
+        soft: "0 2px 20px -6px rgba(43, 62, 74, 0.10)",
+        card: "0 1px 2px rgba(43, 62, 74, 0.05), 0 6px 16px -10px rgba(43, 62, 74, 0.08)",
       },
       keyframes: {
         "fade-in": {

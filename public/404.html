@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found — 読む</title>
+    <link rel="icon" type="image/svg+xml" href="/japanese-reading-practice/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --paper: #faf8f4;
+        --ink: #2b3e4a;
+        --ink-soft: #52697a;
+        --ink-faint: #8fa0a8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+      }
+      main {
+        max-width: 26rem;
+        text-align: center;
+      }
+      .kicker {
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin: 0 0 1.25rem;
+      }
+      .jp {
+        font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+        font-size: 1.75rem;
+        line-height: 2.4;
+        margin: 0 0 0.75rem;
+      }
+      .jp rt {
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+        font-size: 0.5em;
+        color: var(--ink-faint);
+      }
+      .romaji {
+        font-size: 0.8125rem;
+        letter-spacing: 0.02em;
+        color: var(--ink-faint);
+        margin: 0 0 0.25rem;
+      }
+      .english {
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+        font-style: italic;
+        font-size: 1rem;
+        color: var(--ink-soft);
+        margin: 0 0 2.5rem;
+      }
+      a.button {
+        display: inline-block;
+        font-family: inherit;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--paper);
+        background: var(--ink);
+        text-decoration: none;
+        padding: 0.7rem 1.5rem;
+        border-radius: 999px;
+        transition: opacity 0.2s ease;
+      }
+      a.button:hover {
+        opacity: 0.85;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="kicker">404</p>
+      <p class="jp">
+        <ruby>道<rt>みち</rt></ruby>に<ruby>迷いました<rt>まよいました</rt></ruby>。
+      </p>
+      <p class="romaji">Michi ni mayoimashita.</p>
+      <p class="english">Looks like you got lost.</p>
+      <a class="button" href="/japanese-reading-practice/">Back to the library</a>
+    </main>
+  </body>
+</html>
