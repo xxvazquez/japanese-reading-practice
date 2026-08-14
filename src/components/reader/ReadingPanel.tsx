@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import type { Story } from "../../types/story";
-import { getAdjacentStories } from "../../data/stories";
+import { getAdjacentStories } from "../../content/stories";
 import { StoryHeader } from "./StoryHeader";
 import { SentenceBlock } from "./SentenceBlock";
 import { VocabularySection } from "./VocabularySection";

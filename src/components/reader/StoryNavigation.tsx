@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import clsx from "clsx";
 import type { Story } from "../../types/story";
-import { tokensToPlainText } from "../../lib/tokens";
+import { tokensToPlainText } from "../../utils/tokens";
 
 interface StoryNavigationProps {
   previous: Story | null;

@@ -1,7 +1,7 @@
 import type { Story } from "../../types/story";
-import watashiNoIchinichi from "./watashi-no-ichinichi.json";
-import nekoToWatashi from "./neko-to-watashi.json";
-import shumatsuNoYotei from "./shumatsu-no-yotei.json";
+import watashiNoIchinichi from "./n5/watashi-no-ichinichi.json";
+import nekoToWatashi from "./n5/neko-to-watashi.json";
+import shumatsuNoYotei from "./n4/shumatsu-no-yotei.json";
 
 /**
  * Stories are ordered deliberately (roughly easiest first); this order

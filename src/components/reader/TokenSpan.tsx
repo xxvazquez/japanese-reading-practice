@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import type { Token } from "../../types/story";
-import { POS_STYLES } from "../../lib/posStyles";
+import { POS_STYLES } from "../../utils/posStyles";
 
 interface TokenSpanProps {
   token: Token;

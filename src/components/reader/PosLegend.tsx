@@ -1,4 +1,4 @@
-import { POS_LEGEND_ORDER, POS_STYLES } from "../../lib/posStyles";
+import { POS_LEGEND_ORDER, POS_STYLES } from "../../utils/posStyles";
 
 export function PosLegend() {
   return (
