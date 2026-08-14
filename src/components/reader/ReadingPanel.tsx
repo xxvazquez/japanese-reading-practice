@@ -1,11 +1,13 @@
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import type { Story } from "../../types/story";
+import type { Story, Token } from "../../types/story";
 import { getAdjacentStories } from "../../content/stories";
 import { StoryHeader } from "./StoryHeader";
 import { SentenceBlock } from "./SentenceBlock";
 import { VocabularySection } from "./VocabularySection";
 import { GrammarSection } from "./GrammarSection";
 import { StoryNavigation } from "./StoryNavigation";
+import { GrammarPanel } from "./GrammarPanel";
 import { EmptyState } from "../ui/EmptyState";
 
 interface ReadingPanelProps {
@@ -14,6 +16,13 @@ interface ReadingPanelProps {
 }
 
 export function ReadingPanel({ story, onSelectStory }: ReadingPanelProps) {
+  const [selectedToken, setSelectedToken] = useState<Token | null>(null);
+
+  // Switching stories should close whatever grammar panel was open.
+  useEffect(() => {
+    setSelectedToken(null);
+  }, [story?.id]);
+
   if (!story) {
     return <EmptyState message="Choose a story from the library to start reading." />;
   }
@@ -35,7 +44,12 @@ export function ReadingPanel({ story, onSelectStory }: ReadingPanelProps) {
 
           <div className="divide-y divide-ink/[0.05]">
             {story.sentences.map((sentence, i) => (
-              <SentenceBlock key={sentence.id} sentence={sentence} index={i} />
+              <SentenceBlock
+                key={sentence.id}
+                sentence={sentence}
+                index={i}
+                onSelectToken={setSelectedToken}
+              />
             ))}
           </div>
 
@@ -49,6 +63,8 @@ export function ReadingPanel({ story, onSelectStory }: ReadingPanelProps) {
           </div>
         </motion.div>
       </AnimatePresence>
+
+      <GrammarPanel token={selectedToken} onClose={() => setSelectedToken(null)} />
     </div>
   );
 }

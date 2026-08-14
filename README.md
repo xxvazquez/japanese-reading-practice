@@ -9,11 +9,16 @@ Static site, no backend — stories live as JSON files in the repo.
 
 ## Features
 
-- Story library with search and JLPT level filtering (N5–N1)
+- Story library with search and JLPT level filtering (currently N5 only —
+  see [Adding a new JLPT level](#adding-a-new-jlpt-level))
 - Sentence-by-sentence reading view, tokenized word by word
-- Independent toggles for furigana, romaji, and English
+- Independent toggles for furigana, romaji, and English in the reading view
 - Part-of-speech color highlighting (particles, verbs, nouns, adjectives, adverbs)
-- Vocabulary and grammar breakdown per story
+- Click any word to open a grammar note — dictionary form, verb group,
+  particle function, example sentences — written for a true beginner
+- Vocabulary table (Japanese/romaji/English/type columns) with its own
+  furigana/romaji/English toggles, persisted across visits, plus A–Z sorting
+- Grammar-point summary per story
 - Previous/next navigation between stories
 - Responsive layout: two-pane on desktop, drawer on mobile
 
@@ -33,19 +38,23 @@ _Coming soon._
 
 ```
 src/
-  types/story.ts            # Story, Sentence, Token and related types
-  content/stories/           # story content, grouped by JLPT level
-    n5/
-    n4/
-    index.ts                  # loader — registers every story and its reading order
-  context/                   # ReaderSettingsContext — furigana/romaji/english toggle state
-  hooks/useStoryLibrary.ts   # search, JLPT filter, and story selection state
-  utils/                     # small pure helpers (POS color mapping, token → text)
+  types/story.ts             # Story, Sentence, Token and related types
+  types/grammar.ts            # types for the interactive grammar notes
+  content/
+    stories/                   # story content, grouped by JLPT level
+      n5/
+      index.ts                  # loader — registers every story and its reading order
+    grammar/                   # particle/verb/adjective/word notes, keyed by grammarKey
+  context/                    # ReaderSettingsContext — furigana/romaji/english toggle state
+  hooks/
+    useStoryLibrary.ts          # search, JLPT filter, and story selection state
+    useVocabularyDisplaySettings.ts # persisted furigana/romaji/english toggles for the vocab table
+  utils/                      # small pure helpers (POS color mapping, furigana parsing, token → text)
   components/
-    layout/                   # AppLayout — desktop split view / mobile drawer
-    sidebar/                  # search, JLPT filter, story list
-    reader/                   # story header, sentence blocks, vocab & grammar, nav
-    ui/                        # generic pieces (Badge, CollapsibleSection, EmptyState)
+    layout/                    # AppLayout — desktop split view / mobile drawer
+    sidebar/                   # search, JLPT filter, story list
+    reader/                    # story header, sentence blocks, vocab table, grammar panel, nav
+    ui/                         # generic pieces (CollapsibleSection, EmptyState)
 ```
 
 `content/` holds the Japanese stories and their translations; everything
@@ -96,15 +105,39 @@ Each story is a single JSON file under `src/content/stories/<level>/` (e.g.
 romaji, English, vocabulary, and grammar all live together in one object,
 matching the `Story` type in `src/types/story.ts`.
 
-Sentences are arrays of tokens rather than plain strings, so each word can
-carry its own furigana reading and part of speech:
+Sentences are arrays of tokens, and each token is broken into `parts` so
+furigana lands only on the kanji — never on the okurigana next to it:
 
 ```json
 {
-  "surface": "住んでいます",
-  "furigana": "すんでいます",
-  "pos": "verb"
+  "parts": [{ "kanji": "住", "reading": "す" }, { "text": "んでいます" }],
+  "pos": "verb",
+  "grammarKey": "住む"
 }
+```
+
+`grammarKey` is optional — set it when the word has an entry in
+`src/content/grammar/` (see below), and that word becomes clickable in the
+reading view. Particles also take an optional `contextNote`, a short
+sentence-specific note (e.g. "marks 私 as the topic of this sentence") shown
+above the shared particle explanation.
+
+## Grammar notes
+
+Clicking a word in the reading view opens a panel explaining it, written
+from scratch for a true beginner — no grammar or terminology past what an
+N5-level learner needs. The content lives in
+`src/content/grammar/`, one file per part of speech (`particles.ts`,
+`verbs.ts`, `adjectives.ts`, `words.ts`), keyed by dictionary form (or by
+the particle itself). `words.ts` covers nouns and adverbs, and only gets an
+entry when there's something genuinely worth adding beyond the vocabulary
+list — most plain nouns don't have one, and simply aren't clickable.
+
+Example sentences in these files are authored with a compact shorthand
+(`src/utils/furigana.ts`) instead of hand-built part arrays:
+
+```ts
+parseFurigana("私[わたし]は 学生[がくせい]です。")
 ```
 
 ## Adding a new story
@@ -112,25 +145,30 @@ carry its own furigana reading and part of speech:
 1. Create a new JSON file under `src/content/stories/<level>/` (e.g. `n5/`),
    following the shape of an existing story (title, sentences, vocabulary,
    grammar).
-2. Tokenize each sentence — one entry per word/particle, with `surface`,
-   an optional `furigana` (only needed if the surface has kanji), and `pos`.
-3. Import and register it in `src/content/stories/index.ts`. The order of
+2. Tokenize each sentence — one entry per word/particle, with `parts`
+   (kanji runs get a `reading`, kana runs don't) and `pos`.
+3. If the word has a grammar note, add `grammarKey` (and, for particles, a
+   `contextNote`) — see [Grammar notes](#grammar-notes).
+4. Import and register it in `src/content/stories/index.ts`. The order of
    the array controls previous/next navigation, so place it where it
    belongs in the reading progression.
 
 ## Adding a new JLPT level
 
 JLPT levels are typed as `"N5" | "N4" | "N3" | "N2" | "N1"` in
-`src/types/story.ts` — all five already exist and show up automatically in
-the sidebar filter. If a level doesn't have a content folder yet (N3, N2,
-N1), just create `src/content/stories/<level>/` and drop the story JSON in
-— no other code changes needed.
+`src/types/story.ts`, but only N5 has content right now — the sidebar filter
+reads levels straight off `src/content/stories/index.ts`, so it only shows
+what actually has stories (and hides itself entirely when there's just one).
+To add a level, create `src/content/stories/<level>/`, drop story JSON in,
+and register it in the index — no other code changes needed.
 
 ## Design principles
 
-- Muted, pastel palette — no bright or saturated colors
+- Muted, ocean-inspired palette (navy, slate blue, dusty teal) — no bright,
+  neon, or warm/cream tones
 - Generous whitespace, soft shadows, rounded corners
 - Japanese text is always visible; furigana/romaji/English are optional layers on top
+- Typography and spacing carry hierarchy, not color
 - Subtle motion, never decorative for its own sake
 - No gamification, streaks, or badges — this is a reading app, not a habit tracker
 

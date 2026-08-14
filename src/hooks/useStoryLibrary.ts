@@ -1,13 +1,18 @@
 import { useMemo, useState } from "react";
 import { stories } from "../content/stories";
 import type { JlptLevel, Story } from "../types/story";
+import { tokensToPlainText } from "../utils/tokens";
+
+// Canonical order for display — filtered down to whichever levels actually
+// have stories, so the UI only ever shows levels a learner can pick.
+const LEVEL_ORDER: JlptLevel[] = ["N5", "N4", "N3", "N2", "N1"];
 
 // Search matches on any title variant, since a learner might type either
 // the kanji, the romaji, or the English translation.
 function matchesSearch(story: Story, query: string): boolean {
   if (!query.trim()) return true;
   const needle = query.trim().toLowerCase();
-  const japanese = story.title.tokens.map((t) => t.surface).join("");
+  const japanese = tokensToPlainText(story.title.tokens);
   const haystack = [japanese, story.title.romaji, story.title.english]
     .join(" ")
     .toLowerCase();
@@ -42,6 +47,13 @@ export function useStoryLibrary() {
     [selectedStoryId],
   );
 
+  // Only offer levels that actually have stories — adding a new level's
+  // content later is enough for it to show up here on its own.
+  const availableLevels = useMemo(() => {
+    const present = new Set(stories.map((story) => story.jlptLevel));
+    return LEVEL_ORDER.filter((level) => present.has(level));
+  }, []);
+
   return {
     stories: filteredStories,
     allStoriesCount: stories.length,
@@ -49,6 +61,7 @@ export function useStoryLibrary() {
     setSearchQuery,
     activeLevels,
     toggleLevel,
+    availableLevels,
     selectedStory,
     selectedStoryId,
     setSelectedStoryId,

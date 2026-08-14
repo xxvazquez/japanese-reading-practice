@@ -1,17 +1,16 @@
 import clsx from "clsx";
 import type { JlptLevel } from "../../types/story";
 
-const LEVELS: JlptLevel[] = ["N5", "N4", "N3", "N2", "N1"];
-
 interface JlptFilterProps {
+  levels: JlptLevel[];
   activeLevels: Set<JlptLevel>;
   onToggle: (level: JlptLevel) => void;
 }
 
-export function JlptFilter({ activeLevels, onToggle }: JlptFilterProps) {
+export function JlptFilter({ levels, activeLevels, onToggle }: JlptFilterProps) {
   return (
     <div className="flex flex-wrap gap-1.5">
-      {LEVELS.map((level) => {
+      {levels.map((level) => {
         const isActive = activeLevels.has(level);
         return (
           <button

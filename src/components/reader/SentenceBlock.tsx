@@ -1,11 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
-import type { Sentence } from "../../types/story";
+import type { Sentence, Token } from "../../types/story";
 import { useReaderSettings } from "../../context/ReaderSettingsContext";
 import { JapaneseLine } from "./JapaneseLine";
 
 interface SentenceBlockProps {
   sentence: Sentence;
   index: number;
+  onSelectToken: (token: Token) => void;
 }
 
 // Shared enter/exit for the romaji and English rows — animating height (not
@@ -17,7 +18,7 @@ const collapse = {
   exit: { opacity: 0, height: 0, marginTop: 0 },
 };
 
-export function SentenceBlock({ sentence, index }: SentenceBlockProps) {
+export function SentenceBlock({ sentence, index, onSelectToken }: SentenceBlockProps) {
   const { layers } = useReaderSettings();
 
   return (
@@ -32,6 +33,7 @@ export function SentenceBlock({ sentence, index }: SentenceBlockProps) {
             tokens={sentence.tokens}
             showFurigana={layers.furigana}
             className="text-[1.75rem] leading-[2.7] text-ink"
+            onSelectToken={onSelectToken}
           />
 
           <AnimatePresence initial={false}>

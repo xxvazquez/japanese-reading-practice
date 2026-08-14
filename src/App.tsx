@@ -11,6 +11,7 @@ export default function App() {
     setSearchQuery,
     activeLevels,
     toggleLevel,
+    availableLevels,
     selectedStory,
     selectedStoryId,
     setSelectedStoryId,
@@ -26,6 +27,7 @@ export default function App() {
           onSearchChange={setSearchQuery}
           activeLevels={activeLevels}
           onToggleLevel={toggleLevel}
+          availableLevels={availableLevels}
           selectedStoryId={selectedStoryId}
           onSelectStory={setSelectedStoryId}
         />

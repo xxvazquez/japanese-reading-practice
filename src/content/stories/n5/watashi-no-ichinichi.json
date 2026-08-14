@@ -4,9 +4,9 @@
   "estimatedReadingMinutes": 2,
   "title": {
     "tokens": [
-      { "surface": "私", "furigana": "わたし", "pos": "noun" },
-      { "surface": "の", "pos": "particle" },
-      { "surface": "一日", "furigana": "いちにち", "pos": "noun" }
+      { "parts": [{ "kanji": "私", "reading": "わたし" }], "pos": "noun", "grammarKey": "watashi" },
+      { "parts": [{ "text": "の" }], "pos": "particle", "grammarKey": "の", "contextNote": "links 私 to 一日 — \"my day\"" },
+      { "parts": [{ "kanji": "一", "reading": "いち" }, { "kanji": "日", "reading": "にち" }], "pos": "noun", "grammarKey": "ichinichi" }
     ],
     "romaji": "Watashi no Ichinichi",
     "english": "My Day"
@@ -15,12 +15,12 @@
     {
       "id": "s1",
       "tokens": [
-        { "surface": "私", "furigana": "わたし", "pos": "noun" },
-        { "surface": "は", "pos": "particle" },
-        { "surface": "ポーランド", "pos": "noun" },
-        { "surface": "に", "pos": "particle" },
-        { "surface": "住んでいます", "furigana": "すんでいます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "私", "reading": "わたし" }], "pos": "noun", "grammarKey": "watashi" },
+        { "parts": [{ "text": "は" }], "pos": "particle", "grammarKey": "は", "contextNote": "marks 私 as the topic of this sentence" },
+        { "parts": [{ "text": "ポーランド" }], "pos": "noun", "grammarKey": "katakana-loanword" },
+        { "parts": [{ "text": "に" }], "pos": "particle", "grammarKey": "に", "contextNote": "marks ポーランド as the place 私 lives" },
+        { "parts": [{ "kanji": "住", "reading": "す" }, { "text": "んでいます" }], "pos": "verb", "grammarKey": "住む" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Watashi wa Pōrando ni sunde imasu.",
       "english": "I live in Poland."
@@ -28,11 +28,11 @@
     {
       "id": "s2",
       "tokens": [
-        { "surface": "毎朝", "furigana": "まいあさ", "pos": "noun" },
-        { "surface": "七時", "furigana": "しちじ", "pos": "noun" },
-        { "surface": "に", "pos": "particle" },
-        { "surface": "起きます", "furigana": "おきます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "毎", "reading": "まい" }, { "kanji": "朝", "reading": "あさ" }], "pos": "noun", "grammarKey": "mai-prefix" },
+        { "parts": [{ "kanji": "七", "reading": "しち" }, { "kanji": "時", "reading": "じ" }], "pos": "noun", "grammarKey": "time-counter" },
+        { "parts": [{ "text": "に" }], "pos": "particle", "grammarKey": "に", "contextNote": "marks 七時 as the time this happens" },
+        { "parts": [{ "kanji": "起", "reading": "お" }, { "text": "きます" }], "pos": "verb", "grammarKey": "起きる" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Maiasa shichiji ni okimasu.",
       "english": "Every morning I wake up at seven o'clock."
@@ -40,14 +40,14 @@
     {
       "id": "s3",
       "tokens": [
-        { "surface": "顔", "furigana": "かお", "pos": "noun" },
-        { "surface": "を", "pos": "particle" },
-        { "surface": "洗って", "furigana": "あらって", "pos": "verb" },
-        { "surface": "、", "pos": "other" },
-        { "surface": "歯", "furigana": "は", "pos": "noun" },
-        { "surface": "を", "pos": "particle" },
-        { "surface": "磨きます", "furigana": "みがきます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "顔", "reading": "かお" }], "pos": "noun" },
+        { "parts": [{ "text": "を" }], "pos": "particle", "grammarKey": "を", "contextNote": "marks 顔 as the object of 洗って" },
+        { "parts": [{ "kanji": "洗", "reading": "あら" }, { "text": "って" }], "pos": "verb", "grammarKey": "洗う" },
+        { "parts": [{ "text": "、" }], "pos": "other" },
+        { "parts": [{ "kanji": "歯", "reading": "は" }], "pos": "noun" },
+        { "parts": [{ "text": "を" }], "pos": "particle", "grammarKey": "を", "contextNote": "marks 歯 as the object of 磨きます" },
+        { "parts": [{ "kanji": "磨", "reading": "みが" }, { "text": "きます" }], "pos": "verb", "grammarKey": "磨く" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Kao o aratte, ha o migakimasu.",
       "english": "I wash my face and brush my teeth."
@@ -55,10 +55,10 @@
     {
       "id": "s4",
       "tokens": [
-        { "surface": "朝ご飯", "furigana": "あさごはん", "pos": "noun" },
-        { "surface": "を", "pos": "particle" },
-        { "surface": "食べます", "furigana": "たべます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "朝", "reading": "あさ" }, { "text": "ご" }, { "kanji": "飯", "reading": "はん" }], "pos": "noun", "grammarKey": "gohan-compound" },
+        { "parts": [{ "text": "を" }], "pos": "particle", "grammarKey": "を", "contextNote": "marks 朝ご飯 as the object of 食べます" },
+        { "parts": [{ "kanji": "食", "reading": "た" }, { "text": "べます" }], "pos": "verb", "grammarKey": "食べる" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Asagohan o tabemasu.",
       "english": "I eat breakfast."
@@ -66,12 +66,12 @@
     {
       "id": "s5",
       "tokens": [
-        { "surface": "その後", "furigana": "そのあと", "pos": "adverb" },
-        { "surface": "、", "pos": "other" },
-        { "surface": "コーヒー", "pos": "noun" },
-        { "surface": "を", "pos": "particle" },
-        { "surface": "飲みます", "furigana": "のみます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "text": "その" }, { "kanji": "後", "reading": "あと" }], "pos": "adverb", "grammarKey": "sono-ato" },
+        { "parts": [{ "text": "、" }], "pos": "other" },
+        { "parts": [{ "text": "コーヒー" }], "pos": "noun", "grammarKey": "katakana-loanword" },
+        { "parts": [{ "text": "を" }], "pos": "particle", "grammarKey": "を", "contextNote": "marks コーヒー as the object of 飲みます" },
+        { "parts": [{ "kanji": "飲", "reading": "の" }, { "text": "みます" }], "pos": "verb", "grammarKey": "飲む" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Sono ato, kōhī o nomimasu.",
       "english": "After that, I drink coffee."
@@ -79,12 +79,12 @@
     {
       "id": "s6",
       "tokens": [
-        { "surface": "八時", "furigana": "はちじ", "pos": "noun" },
-        { "surface": "に", "pos": "particle" },
-        { "surface": "仕事", "furigana": "しごと", "pos": "noun" },
-        { "surface": "を", "pos": "particle" },
-        { "surface": "始めます", "furigana": "はじめます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "八", "reading": "はち" }, { "kanji": "時", "reading": "じ" }], "pos": "noun", "grammarKey": "time-counter" },
+        { "parts": [{ "text": "に" }], "pos": "particle", "grammarKey": "に", "contextNote": "marks 八時 as the time this happens" },
+        { "parts": [{ "kanji": "仕", "reading": "し" }, { "kanji": "事", "reading": "ごと" }], "pos": "noun" },
+        { "parts": [{ "text": "を" }], "pos": "particle", "grammarKey": "を", "contextNote": "marks 仕事 as the object of 始めます" },
+        { "parts": [{ "kanji": "始", "reading": "はじ" }, { "text": "めます" }], "pos": "verb", "grammarKey": "始める" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Hachiji ni shigoto o hajimemasu.",
       "english": "I start work at eight o'clock."
@@ -92,12 +92,12 @@
     {
       "id": "s7",
       "tokens": [
-        { "surface": "仕事", "furigana": "しごと", "pos": "noun" },
-        { "surface": "で", "pos": "particle" },
-        { "surface": "コンピューター", "pos": "noun" },
-        { "surface": "を", "pos": "particle" },
-        { "surface": "使います", "furigana": "つかいます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "仕", "reading": "し" }, { "kanji": "事", "reading": "ごと" }], "pos": "noun" },
+        { "parts": [{ "text": "で" }], "pos": "particle", "grammarKey": "で", "contextNote": "marks 仕事 as the place this happens" },
+        { "parts": [{ "text": "コンピューター" }], "pos": "noun", "grammarKey": "katakana-loanword" },
+        { "parts": [{ "text": "を" }], "pos": "particle", "grammarKey": "を", "contextNote": "marks コンピューター as the object of 使います" },
+        { "parts": [{ "kanji": "使", "reading": "つか" }, { "text": "います" }], "pos": "verb", "grammarKey": "使う" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Shigoto de konpyūtā o tsukaimasu.",
       "english": "At work I use a computer."
@@ -105,10 +105,10 @@
     {
       "id": "s8",
       "tokens": [
-        { "surface": "昼ご飯", "furigana": "ひるごはん", "pos": "noun" },
-        { "surface": "を", "pos": "particle" },
-        { "surface": "食べます", "furigana": "たべます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "昼", "reading": "ひる" }, { "text": "ご" }, { "kanji": "飯", "reading": "はん" }], "pos": "noun", "grammarKey": "gohan-compound" },
+        { "parts": [{ "text": "を" }], "pos": "particle", "grammarKey": "を", "contextNote": "marks 昼ご飯 as the object of 食べます" },
+        { "parts": [{ "kanji": "食", "reading": "た" }, { "text": "べます" }], "pos": "verb", "grammarKey": "食べる" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Hirugohan o tabemasu.",
       "english": "I eat lunch."
@@ -116,12 +116,12 @@
     {
       "id": "s9",
       "tokens": [
-        { "surface": "五時", "furigana": "ごじ", "pos": "noun" },
-        { "surface": "に", "pos": "particle" },
-        { "surface": "仕事", "furigana": "しごと", "pos": "noun" },
-        { "surface": "が", "pos": "particle" },
-        { "surface": "終わります", "furigana": "おわります", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "五", "reading": "ご" }, { "kanji": "時", "reading": "じ" }], "pos": "noun", "grammarKey": "time-counter" },
+        { "parts": [{ "text": "に" }], "pos": "particle", "grammarKey": "に", "contextNote": "marks 五時 as the time this happens" },
+        { "parts": [{ "kanji": "仕", "reading": "し" }, { "kanji": "事", "reading": "ごと" }], "pos": "noun" },
+        { "parts": [{ "text": "が" }], "pos": "particle", "grammarKey": "が", "contextNote": "marks 仕事 as the subject of 終わります" },
+        { "parts": [{ "kanji": "終", "reading": "お" }, { "text": "わります" }], "pos": "verb", "grammarKey": "終わる" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Goji ni shigoto ga owarimasu.",
       "english": "My work finishes at five o'clock."
@@ -129,10 +129,10 @@
     {
       "id": "s10",
       "tokens": [
-        { "surface": "晩ご飯", "furigana": "ばんごはん", "pos": "noun" },
-        { "surface": "を", "pos": "particle" },
-        { "surface": "食べます", "furigana": "たべます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "晩", "reading": "ばん" }, { "text": "ご" }, { "kanji": "飯", "reading": "はん" }], "pos": "noun", "grammarKey": "gohan-compound" },
+        { "parts": [{ "text": "を" }], "pos": "particle", "grammarKey": "を", "contextNote": "marks 晩ご飯 as the object of 食べます" },
+        { "parts": [{ "kanji": "食", "reading": "た" }, { "text": "べます" }], "pos": "verb", "grammarKey": "食べる" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Bangohan o tabemasu.",
       "english": "I eat dinner."
@@ -140,11 +140,11 @@
     {
       "id": "s11",
       "tokens": [
-        { "surface": "時々", "furigana": "ときどき", "pos": "adverb" },
-        { "surface": "日本語", "furigana": "にほんご", "pos": "noun" },
-        { "surface": "を", "pos": "particle" },
-        { "surface": "勉強します", "furigana": "べんきょうします", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "時", "reading": "とき" }, { "kanji": "々", "reading": "どき" }], "pos": "adverb", "grammarKey": "tokidoki" },
+        { "parts": [{ "kanji": "日", "reading": "に" }, { "kanji": "本", "reading": "ほん" }, { "kanji": "語", "reading": "ご" }], "pos": "noun", "grammarKey": "go-suffix" },
+        { "parts": [{ "text": "を" }], "pos": "particle", "grammarKey": "を", "contextNote": "marks 日本語 as the object of 勉強します" },
+        { "parts": [{ "kanji": "勉", "reading": "べん" }, { "kanji": "強", "reading": "きょう" }, { "text": "します" }], "pos": "verb", "grammarKey": "勉強する" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Tokidoki Nihongo o benkyō shimasu.",
       "english": "Sometimes I study Japanese."
@@ -152,10 +152,10 @@
     {
       "id": "s12",
       "tokens": [
-        { "surface": "本", "furigana": "ほん", "pos": "noun" },
-        { "surface": "を", "pos": "particle" },
-        { "surface": "読みます", "furigana": "よみます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "本", "reading": "ほん" }], "pos": "noun" },
+        { "parts": [{ "text": "を" }], "pos": "particle", "grammarKey": "を", "contextNote": "marks 本 as the object of 読みます" },
+        { "parts": [{ "kanji": "読", "reading": "よ" }, { "text": "みます" }], "pos": "verb", "grammarKey": "読む" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Hon o yomimasu.",
       "english": "I read a book."
@@ -163,41 +163,41 @@
     {
       "id": "s13",
       "tokens": [
-        { "surface": "十一時", "furigana": "じゅういちじ", "pos": "noun" },
-        { "surface": "ごろ", "pos": "particle" },
-        { "surface": "寝ます", "furigana": "ねます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "十", "reading": "じゅう" }, { "kanji": "一", "reading": "いち" }, { "kanji": "時", "reading": "じ" }], "pos": "noun", "grammarKey": "time-counter" },
+        { "parts": [{ "text": "ごろ" }], "pos": "particle", "grammarKey": "ごろ", "contextNote": "marks 十一時 as an approximate time" },
+        { "parts": [{ "kanji": "寝", "reading": "ね" }, { "text": "ます" }], "pos": "verb", "grammarKey": "寝る" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Jūichiji goro nemasu.",
       "english": "I go to bed around eleven o'clock."
     }
   ],
   "vocabulary": [
-    { "word": "私", "furigana": "わたし", "romaji": "watashi", "meaning": "I, me", "pos": "noun" },
-    { "word": "ポーランド", "furigana": "ポーランド", "romaji": "Pōrando", "meaning": "Poland", "pos": "noun" },
-    { "word": "住みます", "furigana": "すみます", "romaji": "sumimasu", "meaning": "to live, to reside", "pos": "verb" },
-    { "word": "毎朝", "furigana": "まいあさ", "romaji": "maiasa", "meaning": "every morning", "pos": "noun" },
-    { "word": "起きます", "furigana": "おきます", "romaji": "okimasu", "meaning": "to wake up, to get up", "pos": "verb" },
-    { "word": "顔", "furigana": "かお", "romaji": "kao", "meaning": "face", "pos": "noun" },
-    { "word": "洗います", "furigana": "あらいます", "romaji": "araimasu", "meaning": "to wash", "pos": "verb" },
-    { "word": "歯", "furigana": "は", "romaji": "ha", "meaning": "tooth, teeth", "pos": "noun" },
-    { "word": "磨きます", "furigana": "みがきます", "romaji": "migakimasu", "meaning": "to brush, to polish", "pos": "verb" },
-    { "word": "朝ご飯", "furigana": "あさごはん", "romaji": "asagohan", "meaning": "breakfast", "pos": "noun" },
-    { "word": "コーヒー", "furigana": "コーヒー", "romaji": "kōhī", "meaning": "coffee", "pos": "noun" },
-    { "word": "飲みます", "furigana": "のみます", "romaji": "nomimasu", "meaning": "to drink", "pos": "verb" },
-    { "word": "仕事", "furigana": "しごと", "romaji": "shigoto", "meaning": "work, job", "pos": "noun" },
-    { "word": "始めます", "furigana": "はじめます", "romaji": "hajimemasu", "meaning": "to start, to begin", "pos": "verb" },
-    { "word": "コンピューター", "furigana": "コンピューター", "romaji": "konpyūtā", "meaning": "computer", "pos": "noun" },
-    { "word": "使います", "furigana": "つかいます", "romaji": "tsukaimasu", "meaning": "to use", "pos": "verb" },
-    { "word": "昼ご飯", "furigana": "ひるごはん", "romaji": "hirugohan", "meaning": "lunch", "pos": "noun" },
-    { "word": "終わります", "furigana": "おわります", "romaji": "owarimasu", "meaning": "to end, to finish", "pos": "verb" },
-    { "word": "晩ご飯", "furigana": "ばんごはん", "romaji": "bangohan", "meaning": "dinner", "pos": "noun" },
-    { "word": "時々", "furigana": "ときどき", "romaji": "tokidoki", "meaning": "sometimes", "pos": "adverb" },
-    { "word": "日本語", "furigana": "にほんご", "romaji": "nihongo", "meaning": "Japanese language", "pos": "noun" },
-    { "word": "勉強します", "furigana": "べんきょうします", "romaji": "benkyō shimasu", "meaning": "to study", "pos": "verb" },
-    { "word": "本", "furigana": "ほん", "romaji": "hon", "meaning": "book", "pos": "noun" },
-    { "word": "読みます", "furigana": "よみます", "romaji": "yomimasu", "meaning": "to read", "pos": "verb" },
-    { "word": "寝ます", "furigana": "ねます", "romaji": "nemasu", "meaning": "to sleep, to go to bed", "pos": "verb" }
+    { "parts": [{ "kanji": "私", "reading": "わたし" }], "romaji": "watashi", "meaning": "I, me", "pos": "noun" },
+    { "parts": [{ "text": "ポーランド" }], "romaji": "Pōrando", "meaning": "Poland", "pos": "noun" },
+    { "parts": [{ "kanji": "住", "reading": "す" }, { "text": "みます" }], "romaji": "sumimasu", "meaning": "to live, to reside", "pos": "verb" },
+    { "parts": [{ "kanji": "毎", "reading": "まい" }, { "kanji": "朝", "reading": "あさ" }], "romaji": "maiasa", "meaning": "every morning", "pos": "noun" },
+    { "parts": [{ "kanji": "起", "reading": "お" }, { "text": "きます" }], "romaji": "okimasu", "meaning": "to wake up, to get up", "pos": "verb" },
+    { "parts": [{ "kanji": "顔", "reading": "かお" }], "romaji": "kao", "meaning": "face", "pos": "noun" },
+    { "parts": [{ "kanji": "洗", "reading": "あら" }, { "text": "います" }], "romaji": "araimasu", "meaning": "to wash", "pos": "verb" },
+    { "parts": [{ "kanji": "歯", "reading": "は" }], "romaji": "ha", "meaning": "tooth, teeth", "pos": "noun" },
+    { "parts": [{ "kanji": "磨", "reading": "みが" }, { "text": "きます" }], "romaji": "migakimasu", "meaning": "to brush, to polish", "pos": "verb" },
+    { "parts": [{ "kanji": "朝", "reading": "あさ" }, { "text": "ご" }, { "kanji": "飯", "reading": "はん" }], "romaji": "asagohan", "meaning": "breakfast", "pos": "noun" },
+    { "parts": [{ "text": "コーヒー" }], "romaji": "kōhī", "meaning": "coffee", "pos": "noun" },
+    { "parts": [{ "kanji": "飲", "reading": "の" }, { "text": "みます" }], "romaji": "nomimasu", "meaning": "to drink", "pos": "verb" },
+    { "parts": [{ "kanji": "仕", "reading": "し" }, { "kanji": "事", "reading": "ごと" }], "romaji": "shigoto", "meaning": "work, job", "pos": "noun" },
+    { "parts": [{ "kanji": "始", "reading": "はじ" }, { "text": "めます" }], "romaji": "hajimemasu", "meaning": "to start, to begin", "pos": "verb" },
+    { "parts": [{ "text": "コンピューター" }], "romaji": "konpyūtā", "meaning": "computer", "pos": "noun" },
+    { "parts": [{ "kanji": "使", "reading": "つか" }, { "text": "います" }], "romaji": "tsukaimasu", "meaning": "to use", "pos": "verb" },
+    { "parts": [{ "kanji": "昼", "reading": "ひる" }, { "text": "ご" }, { "kanji": "飯", "reading": "はん" }], "romaji": "hirugohan", "meaning": "lunch", "pos": "noun" },
+    { "parts": [{ "kanji": "終", "reading": "お" }, { "text": "わります" }], "romaji": "owarimasu", "meaning": "to end, to finish", "pos": "verb" },
+    { "parts": [{ "kanji": "晩", "reading": "ばん" }, { "text": "ご" }, { "kanji": "飯", "reading": "はん" }], "romaji": "bangohan", "meaning": "dinner", "pos": "noun" },
+    { "parts": [{ "kanji": "時", "reading": "とき" }, { "kanji": "々", "reading": "どき" }], "romaji": "tokidoki", "meaning": "sometimes", "pos": "adverb" },
+    { "parts": [{ "kanji": "日", "reading": "に" }, { "kanji": "本", "reading": "ほん" }, { "kanji": "語", "reading": "ご" }], "romaji": "nihongo", "meaning": "Japanese language", "pos": "noun" },
+    { "parts": [{ "kanji": "勉", "reading": "べん" }, { "kanji": "強", "reading": "きょう" }, { "text": "します" }], "romaji": "benkyō shimasu", "meaning": "to study", "pos": "verb" },
+    { "parts": [{ "kanji": "本", "reading": "ほん" }], "romaji": "hon", "meaning": "book", "pos": "noun" },
+    { "parts": [{ "kanji": "読", "reading": "よ" }, { "text": "みます" }], "romaji": "yomimasu", "meaning": "to read", "pos": "verb" },
+    { "parts": [{ "kanji": "寝", "reading": "ね" }, { "text": "ます" }], "romaji": "nemasu", "meaning": "to sleep, to go to bed", "pos": "verb" }
   ],
   "grammar": [
     {

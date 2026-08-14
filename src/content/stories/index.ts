@@ -1,16 +1,19 @@
 import type { Story } from "../../types/story";
 import watashiNoIchinichi from "./n5/watashi-no-ichinichi.json";
 import nekoToWatashi from "./n5/neko-to-watashi.json";
-import shumatsuNoYotei from "./n4/shumatsu-no-yotei.json";
 
 /**
  * Stories are ordered deliberately (roughly easiest first); this order
  * drives previous/next navigation in the reading panel.
+ *
+ * Only N5 has content right now. To add a future level, drop its stories
+ * in a new `n4/`, `n3/`, etc. folder here and import them the same way —
+ * the sidebar's level filter reads levels straight off this list, so a
+ * new level shows up automatically.
  */
 export const stories: Story[] = [
   watashiNoIchinichi as Story,
   nekoToWatashi as Story,
-  shumatsuNoYotei as Story,
 ];
 
 export function getStoryById(id: string): Story | undefined {

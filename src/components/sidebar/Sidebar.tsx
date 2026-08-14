@@ -9,6 +9,7 @@ interface SidebarProps {
   onSearchChange: (value: string) => void;
   activeLevels: Set<JlptLevel>;
   onToggleLevel: (level: JlptLevel) => void;
+  availableLevels: JlptLevel[];
   selectedStoryId: string;
   onSelectStory: (id: string) => void;
 }
@@ -19,6 +20,7 @@ export function Sidebar({
   onSearchChange,
   activeLevels,
   onToggleLevel,
+  availableLevels,
   selectedStoryId,
   onSelectStory,
 }: SidebarProps) {
@@ -32,7 +34,11 @@ export function Sidebar({
           </p>
         </div>
         <SearchBar value={searchQuery} onChange={onSearchChange} />
-        <JlptFilter activeLevels={activeLevels} onToggle={onToggleLevel} />
+        {/* A filter with only one option is just noise — it reappears on its
+            own once a second level has stories. */}
+        {availableLevels.length > 1 && (
+          <JlptFilter levels={availableLevels} activeLevels={activeLevels} onToggle={onToggleLevel} />
+        )}
       </div>
       <div className="min-h-0 flex-1 overflow-y-auto px-5 pb-8">
         <StoryList

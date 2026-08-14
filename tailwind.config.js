@@ -8,8 +8,8 @@ export default {
         // for the library/sidebar chrome around it — the story stays the one
         // warm, inviting surface on the page.
         paper: {
-          DEFAULT: "#FAF8F4",
-          surface: "#F8FBFB",
+          DEFAULT: "#F5F8F8",
+          surface: "#FBFDFD",
           soft: "#EDF2F2",
           muted: "#E1E8E8",
         },

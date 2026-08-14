@@ -4,9 +4,9 @@
   "estimatedReadingMinutes": 1,
   "title": {
     "tokens": [
-      { "surface": "猫", "furigana": "ねこ", "pos": "noun" },
-      { "surface": "と", "pos": "particle" },
-      { "surface": "私", "furigana": "わたし", "pos": "noun" }
+      { "parts": [{ "kanji": "猫", "reading": "ねこ" }], "pos": "noun" },
+      { "parts": [{ "text": "と" }], "pos": "particle", "grammarKey": "と", "contextNote": "connects 猫 and 私 — \"the cat and I\"" },
+      { "parts": [{ "kanji": "私", "reading": "わたし" }], "pos": "noun", "grammarKey": "watashi" }
     ],
     "romaji": "Neko to Watashi",
     "english": "The Cat and I"
@@ -15,14 +15,14 @@
     {
       "id": "s1",
       "tokens": [
-        { "surface": "私", "furigana": "わたし", "pos": "noun" },
-        { "surface": "の", "pos": "particle" },
-        { "surface": "家", "furigana": "いえ", "pos": "noun" },
-        { "surface": "に", "pos": "particle" },
-        { "surface": "猫", "furigana": "ねこ", "pos": "noun" },
-        { "surface": "が", "pos": "particle" },
-        { "surface": "います", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "私", "reading": "わたし" }], "pos": "noun", "grammarKey": "watashi" },
+        { "parts": [{ "text": "の" }], "pos": "particle", "grammarKey": "の", "contextNote": "links 私 to 家 — \"my house\"" },
+        { "parts": [{ "kanji": "家", "reading": "いえ" }], "pos": "noun" },
+        { "parts": [{ "text": "に" }], "pos": "particle", "grammarKey": "に", "contextNote": "marks 家 as where 猫 exists" },
+        { "parts": [{ "kanji": "猫", "reading": "ねこ" }], "pos": "noun" },
+        { "parts": [{ "text": "が" }], "pos": "particle", "grammarKey": "が", "contextNote": "marks 猫 as the subject of います" },
+        { "parts": [{ "text": "います" }], "pos": "verb", "grammarKey": "いる" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Watashi no ie ni neko ga imasu.",
       "english": "There is a cat in my house."
@@ -30,13 +30,13 @@
     {
       "id": "s2",
       "tokens": [
-        { "surface": "猫", "furigana": "ねこ", "pos": "noun" },
-        { "surface": "の", "pos": "particle" },
-        { "surface": "名前", "furigana": "なまえ", "pos": "noun" },
-        { "surface": "は", "pos": "particle" },
-        { "surface": "モモ", "pos": "noun" },
-        { "surface": "です", "pos": "other" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "猫", "reading": "ねこ" }], "pos": "noun" },
+        { "parts": [{ "text": "の" }], "pos": "particle", "grammarKey": "の", "contextNote": "links 猫 to 名前 — \"the cat's name\"" },
+        { "parts": [{ "kanji": "名", "reading": "な" }, { "kanji": "前", "reading": "まえ" }], "pos": "noun", "grammarKey": "namae" },
+        { "parts": [{ "text": "は" }], "pos": "particle", "grammarKey": "は", "contextNote": "marks 名前 as the topic" },
+        { "parts": [{ "text": "モモ" }], "pos": "noun", "grammarKey": "katakana-loanword" },
+        { "parts": [{ "text": "です" }], "pos": "other", "grammarKey": "desu" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Neko no namae wa Momo desu.",
       "english": "The cat's name is Momo."
@@ -44,13 +44,13 @@
     {
       "id": "s3",
       "tokens": [
-        { "surface": "モモ", "pos": "noun" },
-        { "surface": "は", "pos": "particle" },
-        { "surface": "白くて", "furigana": "しろくて", "pos": "adjective" },
-        { "surface": "、", "pos": "other" },
-        { "surface": "小さい", "furigana": "ちいさい", "pos": "adjective" },
-        { "surface": "です", "pos": "other" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "text": "モモ" }], "pos": "noun", "grammarKey": "katakana-loanword" },
+        { "parts": [{ "text": "は" }], "pos": "particle", "grammarKey": "は", "contextNote": "marks モモ as the topic" },
+        { "parts": [{ "kanji": "白", "reading": "しろ" }, { "text": "くて" }], "pos": "adjective", "grammarKey": "白い" },
+        { "parts": [{ "text": "、" }], "pos": "other" },
+        { "parts": [{ "kanji": "小", "reading": "ちい" }, { "text": "さい" }], "pos": "adjective", "grammarKey": "小さい" },
+        { "parts": [{ "text": "です" }], "pos": "other", "grammarKey": "desu" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Momo wa shirokute, chiisai desu.",
       "english": "Momo is white and small."
@@ -58,12 +58,12 @@
     {
       "id": "s4",
       "tokens": [
-        { "surface": "毎日", "furigana": "まいにち", "pos": "noun" },
-        { "surface": "、", "pos": "other" },
-        { "surface": "朝ご飯", "furigana": "あさごはん", "pos": "noun" },
-        { "surface": "を", "pos": "particle" },
-        { "surface": "あげます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "毎", "reading": "まい" }, { "kanji": "日", "reading": "にち" }], "pos": "noun", "grammarKey": "mai-prefix" },
+        { "parts": [{ "text": "、" }], "pos": "other" },
+        { "parts": [{ "kanji": "朝", "reading": "あさ" }, { "text": "ご" }, { "kanji": "飯", "reading": "はん" }], "pos": "noun", "grammarKey": "gohan-compound" },
+        { "parts": [{ "text": "を" }], "pos": "particle", "grammarKey": "を", "contextNote": "marks 朝ご飯 as the object of あげます" },
+        { "parts": [{ "text": "あげます" }], "pos": "verb", "grammarKey": "あげる" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Mainichi, asagohan o agemasu.",
       "english": "Every day, I give her breakfast."
@@ -71,11 +71,11 @@
     {
       "id": "s5",
       "tokens": [
-        { "surface": "モモ", "pos": "noun" },
-        { "surface": "は", "pos": "particle" },
-        { "surface": "よく", "pos": "adverb" },
-        { "surface": "寝ます", "furigana": "ねます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "text": "モモ" }], "pos": "noun", "grammarKey": "katakana-loanword" },
+        { "parts": [{ "text": "は" }], "pos": "particle", "grammarKey": "は", "contextNote": "marks モモ as the topic" },
+        { "parts": [{ "text": "よく" }], "pos": "adverb", "grammarKey": "yoku" },
+        { "parts": [{ "kanji": "寝", "reading": "ね" }, { "text": "ます" }], "pos": "verb", "grammarKey": "寝る" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Momo wa yoku nemasu.",
       "english": "Momo sleeps a lot."
@@ -83,11 +83,11 @@
     {
       "id": "s6",
       "tokens": [
-        { "surface": "時々", "furigana": "ときどき", "pos": "adverb" },
-        { "surface": "、", "pos": "other" },
-        { "surface": "一緒に", "furigana": "いっしょに", "pos": "adverb" },
-        { "surface": "遊びます", "furigana": "あそびます", "pos": "verb" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "時", "reading": "とき" }, { "kanji": "々", "reading": "どき" }], "pos": "adverb", "grammarKey": "tokidoki" },
+        { "parts": [{ "text": "、" }], "pos": "other" },
+        { "parts": [{ "kanji": "一", "reading": "いっ" }, { "kanji": "緒", "reading": "しょ" }, { "text": "に" }], "pos": "adverb", "grammarKey": "issho-ni" },
+        { "parts": [{ "kanji": "遊", "reading": "あそ" }, { "text": "びます" }], "pos": "verb", "grammarKey": "遊ぶ" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Tokidoki, issho ni asobimasu.",
       "english": "Sometimes, we play together."
@@ -95,12 +95,12 @@
     {
       "id": "s7",
       "tokens": [
-        { "surface": "モモ", "pos": "noun" },
-        { "surface": "は", "pos": "particle" },
-        { "surface": "とても", "pos": "adverb" },
-        { "surface": "かわいい", "pos": "adjective" },
-        { "surface": "です", "pos": "other" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "text": "モモ" }], "pos": "noun", "grammarKey": "katakana-loanword" },
+        { "parts": [{ "text": "は" }], "pos": "particle", "grammarKey": "は", "contextNote": "marks モモ as the topic" },
+        { "parts": [{ "text": "とても" }], "pos": "adverb", "grammarKey": "totemo" },
+        { "parts": [{ "text": "かわいい" }], "pos": "adjective", "grammarKey": "かわいい" },
+        { "parts": [{ "text": "です" }], "pos": "other", "grammarKey": "desu" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Momo wa totemo kawaii desu.",
       "english": "Momo is very cute."
@@ -108,32 +108,32 @@
     {
       "id": "s8",
       "tokens": [
-        { "surface": "私", "furigana": "わたし", "pos": "noun" },
-        { "surface": "は", "pos": "particle" },
-        { "surface": "モモ", "pos": "noun" },
-        { "surface": "が", "pos": "particle" },
-        { "surface": "大好き", "furigana": "だいすき", "pos": "adjective" },
-        { "surface": "です", "pos": "other" },
-        { "surface": "。", "pos": "other" }
+        { "parts": [{ "kanji": "私", "reading": "わたし" }], "pos": "noun", "grammarKey": "watashi" },
+        { "parts": [{ "text": "は" }], "pos": "particle", "grammarKey": "は", "contextNote": "marks 私 as the topic" },
+        { "parts": [{ "text": "モモ" }], "pos": "noun", "grammarKey": "katakana-loanword" },
+        { "parts": [{ "text": "が" }], "pos": "particle", "grammarKey": "が", "contextNote": "marks モモ as what 私 loves" },
+        { "parts": [{ "kanji": "大", "reading": "だい" }, { "kanji": "好", "reading": "す" }, { "text": "き" }], "pos": "adjective", "grammarKey": "大好き" },
+        { "parts": [{ "text": "です" }], "pos": "other", "grammarKey": "desu" },
+        { "parts": [{ "text": "。" }], "pos": "other" }
       ],
       "romaji": "Watashi wa Momo ga daisuki desu.",
       "english": "I love Momo very much."
     }
   ],
   "vocabulary": [
-    { "word": "家", "furigana": "いえ", "romaji": "ie", "meaning": "house, home", "pos": "noun" },
-    { "word": "猫", "furigana": "ねこ", "romaji": "neko", "meaning": "cat", "pos": "noun" },
-    { "word": "名前", "furigana": "なまえ", "romaji": "namae", "meaning": "name", "pos": "noun" },
-    { "word": "白い", "furigana": "しろい", "romaji": "shiroi", "meaning": "white", "pos": "adjective" },
-    { "word": "小さい", "furigana": "ちいさい", "romaji": "chiisai", "meaning": "small", "pos": "adjective" },
-    { "word": "毎日", "furigana": "まいにち", "romaji": "mainichi", "meaning": "every day", "pos": "noun" },
-    { "word": "あげます", "furigana": "あげます", "romaji": "agemasu", "meaning": "to give", "pos": "verb" },
-    { "word": "よく", "furigana": "よく", "romaji": "yoku", "meaning": "often, a lot", "pos": "adverb" },
-    { "word": "一緒に", "furigana": "いっしょに", "romaji": "issho ni", "meaning": "together", "pos": "adverb" },
-    { "word": "遊びます", "furigana": "あそびます", "romaji": "asobimasu", "meaning": "to play", "pos": "verb" },
-    { "word": "とても", "furigana": "とても", "romaji": "totemo", "meaning": "very", "pos": "adverb" },
-    { "word": "かわいい", "furigana": "かわいい", "romaji": "kawaii", "meaning": "cute", "pos": "adjective" },
-    { "word": "大好き", "furigana": "だいすき", "romaji": "daisuki", "meaning": "to love, to like very much", "pos": "adjective" }
+    { "parts": [{ "kanji": "家", "reading": "いえ" }], "romaji": "ie", "meaning": "house, home", "pos": "noun" },
+    { "parts": [{ "kanji": "猫", "reading": "ねこ" }], "romaji": "neko", "meaning": "cat", "pos": "noun" },
+    { "parts": [{ "kanji": "名", "reading": "な" }, { "kanji": "前", "reading": "まえ" }], "romaji": "namae", "meaning": "name", "pos": "noun" },
+    { "parts": [{ "kanji": "白", "reading": "しろ" }, { "text": "い" }], "romaji": "shiroi", "meaning": "white", "pos": "adjective" },
+    { "parts": [{ "kanji": "小", "reading": "ちい" }, { "text": "さい" }], "romaji": "chiisai", "meaning": "small", "pos": "adjective" },
+    { "parts": [{ "kanji": "毎", "reading": "まい" }, { "kanji": "日", "reading": "にち" }], "romaji": "mainichi", "meaning": "every day", "pos": "noun" },
+    { "parts": [{ "text": "あげます" }], "romaji": "agemasu", "meaning": "to give", "pos": "verb" },
+    { "parts": [{ "text": "よく" }], "romaji": "yoku", "meaning": "often, a lot", "pos": "adverb" },
+    { "parts": [{ "kanji": "一", "reading": "いっ" }, { "kanji": "緒", "reading": "しょ" }, { "text": "に" }], "romaji": "issho ni", "meaning": "together", "pos": "adverb" },
+    { "parts": [{ "kanji": "遊", "reading": "あそ" }, { "text": "びます" }], "romaji": "asobimasu", "meaning": "to play", "pos": "verb" },
+    { "parts": [{ "text": "とても" }], "romaji": "totemo", "meaning": "very", "pos": "adverb" },
+    { "parts": [{ "text": "かわいい" }], "romaji": "kawaii", "meaning": "cute", "pos": "adjective" },
+    { "parts": [{ "kanji": "大", "reading": "だい" }, { "kanji": "好", "reading": "す" }, { "text": "き" }], "romaji": "daisuki", "meaning": "to love, to like very much", "pos": "adjective" }
   ],
   "grammar": [
     {
