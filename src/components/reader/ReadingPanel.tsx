@@ -21,7 +21,7 @@ export function ReadingPanel({ story, onSelectStory }: ReadingPanelProps) {
   const { previous, next } = getAdjacentStories(story.id);
 
   return (
-    <div className="mx-auto max-w-2xl px-6 py-10 sm:px-10">
+    <div className="mx-auto max-w-2xl px-6 py-14 sm:px-10 sm:py-20">
       {/* Re-keying on story.id restarts the fade whenever the reader switches stories. */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -33,18 +33,18 @@ export function ReadingPanel({ story, onSelectStory }: ReadingPanelProps) {
         >
           <StoryHeader story={story} />
 
-          <div className="divide-y divide-ink/[0.05] py-2">
+          <div className="divide-y divide-ink/[0.05]">
             {story.sentences.map((sentence, i) => (
               <SentenceBlock key={sentence.id} sentence={sentence} index={i} />
             ))}
           </div>
 
-          <div className="mt-8 space-y-4">
+          <div className="mt-16 space-y-4">
             <VocabularySection vocabulary={story.vocabulary} />
             <GrammarSection grammar={story.grammar} />
           </div>
 
-          <div className="mt-8">
+          <div className="mt-10">
             <StoryNavigation previous={previous} next={next} onNavigate={onSelectStory} />
           </div>
         </motion.div>

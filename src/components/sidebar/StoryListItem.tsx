@@ -16,7 +16,7 @@ export function StoryListItem({ story, isActive, onSelect }: StoryListItemProps)
       onClick={onSelect}
       aria-current={isActive}
       className={clsx(
-        "group w-full rounded-2xl border px-4 py-3.5 text-left transition-all duration-200",
+        "group w-full rounded-xl border px-4 py-3.5 text-left transition-all duration-200",
         isActive
           ? "border-ink/10 bg-white shadow-card"
           : "border-transparent hover:border-ink/5 hover:bg-white/60",
